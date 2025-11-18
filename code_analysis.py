@@ -171,6 +171,11 @@ def process_file(excel_path):
     md_q3 = normalize_columns(pd.read_excel(xls, "Medicaid Q3"))
     md_q4 = normalize_columns(pd.read_excel(xls, "Medicaid Q4"))
 
+    wa_q3 = wa_q3.replace(np.nan, "", regex=True)
+    wa_q4 = wa_q4.replace(np.nan, "", regex=True)
+    md_q3 = md_q3.replace(np.nan, "", regex=True)
+    md_q4 = md_q4.replace(np.nan, "", regex=True)
+
     # Auto-detect column names
     wa_col_q3 = find_column(wa_q3, ["Code Notes"])
     wa_col_q4 = find_column(wa_q4, ["Code Notes"])
@@ -183,6 +188,10 @@ def process_file(excel_path):
 
     print("Comparing Medicaid...")
     md_report = semantic_compare(md_q3, md_q4, md_col_q3)
+
+    # Replace NaN with empty strings before exporting
+    wa_report = wa_report.replace(np.nan, "", regex=True)
+    md_report = md_report.replace(np.nan, "", regex=True)
 
     with pd.ExcelWriter(excel_path, mode="a", engine="openpyxl", if_sheet_exists="replace") as writer:
         wa_report.to_excel(writer, sheet_name="WA Q3 vs WA Q4", index=False)
