@@ -4,3 +4,6 @@ venv/
 *.pyc
 __pycache__/
 *.xlsx
+*.env
+*.iml
+*.xml
