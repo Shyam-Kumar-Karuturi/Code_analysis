@@ -1,0 +1,10 @@
+pandas
+numpy
+openpyxl
+google-genai
+python-dotenv
+xlsxwriter
+ttkbootstrap
+
+# Optional but recommended for much faster Excel reading
+python-calamine

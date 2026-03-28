@@ -1,0 +1,6 @@
+# Python virtual environments
+vir_env/
+venv/
+*.pyc
+__pycache__/
+*.xlsx
