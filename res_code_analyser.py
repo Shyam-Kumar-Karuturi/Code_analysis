@@ -12,7 +12,7 @@ API_KEY = os.getenv("GOOGLE_API_KEY")
 if not API_KEY:
     print("GOOGLE_API_KEY not found in .env")
 else:
-    API_KEY = 'AIzaSyD9WvnD_GR_rJcU2iZcjXlhtILRlbx5n_c'
+    API_KEY = ''
 genai.configure(api_key=API_KEY)
 
 EMBED_MODEL = "models/text-embedding-004"

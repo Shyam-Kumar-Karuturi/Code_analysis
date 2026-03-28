@@ -16,7 +16,7 @@ API_KEY = os.getenv("GOOGLE_API_KEY")
 
 # Fallback Key
 if not API_KEY:
-    API_KEY = 'AIzaSyD9WvnD_GR_rJcU2iZcjXlhtILRlbx5n_c'
+    API_KEY = ''
 
 if not API_KEY:
     print("CRITICAL WARNING: No Google API Key found. Script will fail.")

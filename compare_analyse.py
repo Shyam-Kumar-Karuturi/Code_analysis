@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 # CONFIGURATION
 # ---------------------------
 load_dotenv()
-API_KEY = os.getenv("GOOGLE_API_KEY") or 'AIzaSyBLQ0ATKyuJPU_r7b7PBu5C0JWNAJJNlPA'  # Replace if needed
+API_KEY = os.getenv("GOOGLE_API_KEY")
 
 if not API_KEY:
     print("CRITICAL WARNING: No Google API Key found. AI features will fail.")

@@ -15,7 +15,7 @@ load_dotenv()
 API_KEY = os.getenv("GOOGLE_API_KEY")
 
 if not API_KEY:
-    API_KEY = 'AIzaSyBLQ0ATKyuJPU_r7b7PBu5C0JWNAJJNlPA'
+    API_KEY = ''
     # raise EnvironmentError("GOOGLE_API_KEY not set. Please add it to your .env file.")
 
 # Initialise the new google-genai client
